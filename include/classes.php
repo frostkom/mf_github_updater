@@ -124,6 +124,8 @@ class mf_github_updater
 
 									$log_message = "GitHub: There is a new version of ".$repo_name." to be downloaded";
 
+									do_log($log_message, 'trash');
+
 									if($file_datetime < $repo_updated)
 									{
 										//$file_content = get_file_content(array('file' => $file_dir));
@@ -135,11 +137,6 @@ class mf_github_updater
 										$repo_time = date("H:i", strtotime($repo_updated));
 
 										do_log($log_message." (".($file_date < $repo_date ? $file_date." < ".$repo_date : $file_time." < ".$repo_time." (".$file_date.")").")"); // format_date($file_datetime)." < ".format_date($repo_updated) // (".$file_version.")
-									}
-
-									else
-									{
-										do_log($log_message, 'trash');
 									}
 								}
 							}

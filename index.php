@@ -20,6 +20,8 @@ if(is_admin())
 {
 	register_uninstall_hook(__FILE__, 'uninstall_github_updater');
 
+	add_action('admin_init', array($obj_github_updater, 'admin_init'), 0);
+
 	add_filter('pre_set_site_transient_update_plugins', array($obj_github_updater, 'pre_set_site_transient_update_plugins'), 10, 1);
 }
 

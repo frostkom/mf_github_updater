@@ -4,14 +4,6 @@ class mf_github_updater
 {
 	function __construct(){}
 
-	function admin_init()
-	{
-		if(!is_plugin_active("mf_base/index.php"))
-		{
-			deactivate_plugins(str_replace("include/classes.php", "index.php", plugin_basename(__FILE__)));
-		}
-	}
-
 	function pre_set_site_transient_update_plugins($transient)
 	{
 		if(property_exists($transient, 'checked')) // && $checked = $transient->checked

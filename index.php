@@ -3,10 +3,10 @@
 Plugin Name: MF GitHub Updater
 Plugin URI: https://github.com/frostkom/mf_github_updater
 Description: A Wordpress plugin to display that there are plugin or theme updates on GitHub
-Version: 1.0.11
+Version: 1.0.12
 Licence: GPLv2 or later
 Author: Martin Fors
-Author URI: https://frostkom.se
+Author URI: https://martinfors.se
 
 Depends: MF Base
 GitHub Plugin URI: frostkom/mf_github_updater
